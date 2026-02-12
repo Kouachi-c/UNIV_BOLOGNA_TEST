@@ -4,28 +4,30 @@
 */
 
 `include "params.sv"
-import fifo_package::*;
+
 
 module fifo
+import fifo_package::*;
 #(
 
 )(
-    input  wire clk;
-    input  wire rst_n;
+    input  wire clk,
+    input  wire rst_n,
 
-    input  wire [DATA_WIDTH-1:0] push_data_i   ;
-    input  wire                  push_valid_i  ;
-    output wire                  push_grant_o  ;
+    input  wire [DATA_WIDTH-1:0] push_data_i   ,
+    input  wire                  push_valid_i  ,
+    output wire                  push_grant_o  ,
 
-    input  wire                  pop_grant_i   ;
-    output wire [DATA_WIDTH-1:0] pop_data_o    ;
-    output wire                  pop_valid_o   ;
+    input  wire                  pop_grant_i   ,
+    output wire [DATA_WIDTH-1:0] pop_data_o    ,
+    output wire                  pop_valid_o   
     
    
-)
+);
 
 // FIFO DEPTH checker
-FIFO_DEPTH_CHEKER : assert (FIFO_DEPTH >= 2) else $display("ERR : FIFO_DEPTH must be >= 2");
+FIFO_DEPTH_CHEKER : 
+    assert (FIFO_DEPTH >= 2) else $display("ERR : FIFO_DEPTH must be >= 2");
 
 
 reg [ADDR_WIDTH:0] write_ptr ; // Write pointer

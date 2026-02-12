@@ -3,21 +3,22 @@
 */
 
 `include "params.sv"
-import fifo_package::*;
+
 
 module sram
+import fifo_package::*;
 #(
 
 )(
-    input  wire                  clk      ;
+    input  wire                  clk      ,
 
-    input  wire [ADDR_WIDTH-1:0] addr_i   ;
-    input  wire [DATA_WIDTH-1:0] wdata_i  ;
-    input  wire                  we_i     ;
+    input  wire [ADDR_WIDTH-1:0] addr_i   ,
+    input  wire [DATA_WIDTH-1:0] wdata_i  ,
+    input  wire                  we_i     ,
 
-    output wire [DATA_WIDTH-1:0] rdata_o  ;
+    output wire [DATA_WIDTH-1:0] rdata_o  
 
-)
+);
 
 // SRAM memory array
 reg [DATA_WIDTH-1:0] sram_mem [0:SRAM_DEPTH-1];

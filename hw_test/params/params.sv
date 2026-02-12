@@ -1,4 +1,4 @@
-package fifo_package
+package fifo_package;
 
     localparam WIDTH       = 32             ;  // Width of the data bus
     localparam DATA_WIDTH  = WIDTH + 1      ;  // Width of the data bus including parity bit

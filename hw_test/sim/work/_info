@@ -1,0 +1,59 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test
+Xfifo_package
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 !s110 1770921557
+!i10b 1
+!s100 nCz2SmE5VYjk0Zd2CDJ2C2
+IN`4dc0Z>k[?Q43ZFddfl[1
+S1
+R0
+Z3 w1770921557
+8sim/hw/params.sv
+Fsim/hw/params.sv
+!i122 3
+L0 1 0
+VN`4dc0Z>k[?Q43ZFddfl[1
+Z4 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z5 !s108 1770921557.000000
+!s107 sim/hw/traffic_gen.sv|sim/hw/top_module.sv|sim/hw/tb.sv|sim/hw/sram.sv|sim/hw/parity_check.sv|sim/hw/params.sv|sim/hw/grantin_gen.sv|sim/hw/fifo.sv|sim/hw/checker.sv|
+Z6 !s90 -sv|-work|sim/work|sim/hw/checker.sv|sim/hw/fifo.sv|sim/hw/grantin_gen.sv|sim/hw/params.sv|sim/hw/parity_check.sv|sim/hw/sram.sv|sim/hw/tb.sv|sim/hw/top_module.sv|sim/hw/traffic_gen.sv|
+!i113 0
+Z7 o-sv -work sim/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0
+vtop_module
+R1
+DXx4 work 12 fifo_package 0 22 N`4dc0Z>k[?Q43ZFddfl[1
+R2
+!i10b 1
+!s100 MOnTea=12eAb9SDAR<bKz0
+ICZzTI9Djgc?Y6Df30RFKi3
+S1
+R0
+R3
+8sim/hw/top_module.sv
+Fsim/hw/top_module.sv
+!i122 3
+L0 9 45
+VDg1SIo80bB@j0V0VzS_@n1
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 sim/hw/traffic_gen.sv|sim/hw/top_module.sv|sim/hw/tb.sv|sim/hw/sram.sv|sim/hw/parity_check.sv|sim/hw/params.sv|sim/hw/grantin_gen.sv|sim/hw/fifo.sv|sim/hw/checker.sv|
+R6
+!i113 0
+R7
+R8
