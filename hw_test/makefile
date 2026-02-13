@@ -1,3 +1,6 @@
+# Current directory: hw_test
+CUR_DIR = $(shell pwd)
+
 # Simulator: modelsim
 VSIM = vsim
 
@@ -7,17 +10,17 @@ SV_FLAGS = -sv
 
 
 # FILES_DIR
-FILES_DIR = design
-PARAMS_DIR = params
+FILES_DIR = $(CUR_DIR)/design
+PARAMS_DIR = $(CUR_DIR)/params
 
 # TB_DIR
-TB_DIR = testbench
+TB_DIR = $(CUR_DIR)/testbench
 
 # SIM_DIR
-SIM_DIR = sim
+SIM_DIR = $(CUR_DIR)/sim
 
 # TOP_MODULE
-SIM_TOP = top_module
+TOP_MODULE = top_module
 
 # Source files for simulation
 SRC_FILES = $(FILES_DIR)/top_module.sv \
@@ -32,14 +35,13 @@ TB_FILES = $(TB_DIR)/tb.sv \
 		   $(TB_DIR)/traffic_gen.sv 
 
 #WORK_DIR
-WORK_DIR = $(SIM_DIR)/work
+WORK_DIR = work
 
-# WAVEFORM output directory
-WAVE = $(SIM_DIR)/wave
+# Outputs directory
+LOG_FILES = $(SIM_DIR)/log
 
 # SIM files directory
 SIM_FILES = $(SIM_DIR)/hw
-
 
 
 .PHONY: all
@@ -48,7 +50,7 @@ all: compile simulate
 # Compile the design
 .PHONY: compile
 compile:
-	mkdir -p $(WAVE)
+	mkdir -p $(LOG_FILES)
 	mkdir -p $(SIM_FILES)
 	@for file in $(SRC_FILES) $(TB_FILES); do \
 		cp $$file $(SIM_FILES)/; \
@@ -64,13 +66,13 @@ compile:
 simulate:
 	@echo "Starting simulation ..."
 	vsim -c -voptargs=+acc \
-	-wlf $(WAVE)/wave.wlf $(TOP_MODULE) \
+	-wlf $(LOG_FILES)/wave.wlf $(TOP_MODULE) \
 	-do "log -r /*; run -all; quit" \
-	| tee $(WORK_DIR)/simulation.log
+	| tee $(LOG_FILES)/simulation.log
 	@echo "Simulation completed. Check simulation.log for details."
 
 
 
 .PHONY: clean
 clean:
-	rm -rf $(WORK_DIR) $(SIM_FILES) $(WAVE) sim.log transcript
+	rm -rf $(WORK_DIR) $(SIM_FILES) $(LOG_FILES) transcript

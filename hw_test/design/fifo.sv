@@ -26,8 +26,10 @@ import fifo_package::*;
 );
 
 // FIFO DEPTH checker
-FIFO_DEPTH_CHEKER : 
-    assert (FIFO_DEPTH >= 2) else $display("ERR : FIFO_DEPTH must be >= 2");
+initial begin : FIFO_DEPTH_CHEKER
+    assert (DEPTH >= 2) else $error("ERR : DEPTH must be >= 2");
+end
+
 
 
 reg [ADDR_WIDTH:0] write_ptr ; // Write pointer

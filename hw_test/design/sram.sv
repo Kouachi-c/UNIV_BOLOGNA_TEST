@@ -21,7 +21,7 @@ import fifo_package::*;
 );
 
 // SRAM memory array
-reg [DATA_WIDTH-1:0] sram_mem [0:SRAM_DEPTH-1];
+reg [DATA_WIDTH-1:0] sram_mem [0:DEPTH-1];
 
 // read data register
 reg [DATA_WIDTH-1:0] rdata_o_reg;

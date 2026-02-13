@@ -31,7 +31,7 @@ reg valid_o_reg;
 /////////////////////////////////////////////////
 
 // Parity bit extraction logic
-generate : PARITY_BIT_EXTRACTION
+always_comb begin : PARITY_BIT_EXTRACTION
     if(PARITY_BIT == "MSB") begin
         parity_bit = data_i[DATA_WIDTH-1]; // Extract parity bit from MSB
         data = data_i[DATA_WIDTH-2:0]; // Extract data without parity bit
@@ -39,11 +39,11 @@ generate : PARITY_BIT_EXTRACTION
         parity_bit = data_i[0]; // Extract parity bit from LSB
         data = data_i[DATA_WIDTH-1:1]; // Extract data without parity bit 
     end
-endgenerate
+end
 
 
 // Parity check logic
-generate : PARITY_CHECK_LOGIC
+always_comb begin : PARITY_CHECK_LOGIC
     if(PARITY_TYPE == "EVEN") begin
         if (pop_valid_o_i && grant_i) begin
             valid_o_reg = (parity_bit == ~(^data)); // Valid if parity bit matches even parity of data
@@ -57,7 +57,7 @@ generate : PARITY_CHECK_LOGIC
             valid_o_reg = 1'b0; // No valid data, set valid_o to 0
         end 
     end
-endgenerate
+end
 
 
 assign valid_o = valid_o_reg; 
