@@ -1,0 +1,182 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test
+T_opt
+Z2 !s110 1770989281
+V7dhDoGGWS4Y6a?a7b807Y1
+04 10 4 work top_module fast 0
+=1-000ae431a4f1-698f26e1-c5b15-128394
+R0
+!s12f OEM100
+!s12b OEM25U4 
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vfifo
+Z4 2/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/checker.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/fifo.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/grantin_gen.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/params.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/parity_check.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/sram.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/tb.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/top_module.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/traffic_gen.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 DXx4 work 12 fifo_package 0 22 _XM3mOamB3OQ^SjQbYh<M1
+R2
+!i10b 1
+!s100 ^mOI8jV<K<IL=@GJmOhVP0
+IK?nN<Tn01eaLkK:Neml361
+S1
+R1
+Z7 w1770989280
+8/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/fifo.sv
+F/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/fifo.sv
+!i122 0
+L0 9 145
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z10 !s108 1770989281.000000
+Z11 !s107 /home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/traffic_gen.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/top_module.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/tb.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/sram.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/parity_check.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/params.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/grantin_gen.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/fifo.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/checker.sv|
+Z12 !s90 -sv|-work|work|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/checker.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/fifo.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/grantin_gen.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/params.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/parity_check.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/sram.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/tb.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/top_module.sv|/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/traffic_gen.sv|
+!i113 0
+Z13 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+Xfifo_package
+R4
+R5
+R2
+!i10b 1
+!s100 nCz2SmE5VYjk0Zd2CDJ2C2
+I_XM3mOamB3OQ^SjQbYh<M1
+S1
+R1
+R7
+8/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/params.sv
+F/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/params.sv
+!i122 0
+L0 1 0
+V_XM3mOamB3OQ^SjQbYh<M1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R3
+vparity_check
+R4
+R5
+R6
+R2
+!i10b 1
+!s100 Zh:QMYg?hhBzBS;h_`TOV1
+Io]4GHHYE@2onI]OYhPd:W2
+S1
+R1
+R7
+8/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/parity_check.sv
+F/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/parity_check.sv
+!i122 0
+L0 9 66
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R3
+vsram
+R4
+R5
+R6
+R2
+!i10b 1
+!s100 a2Q^J[g37LgC;c_GhF]T50
+IjjUjSdFI_[0DF]1Hnc2?O2
+S1
+R1
+R7
+8/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/sram.sv
+F/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/sram.sv
+!i122 0
+L0 8 35
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R3
+vtb_top
+R4
+R5
+R6
+R2
+!i10b 1
+!s100 RH]4BF<dm1RSk^VRf2<L`0
+IBoOI;jmcA<`13l5K35OIc1
+S1
+R1
+R7
+8/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/tb.sv
+F/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/tb.sv
+!i122 0
+L0 9 99
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R3
+vtop_module
+R4
+R5
+R6
+R2
+!i10b 1
+!s100 MOnTea=12eAb9SDAR<bKz0
+IBLW0z5cK@a5eU:3aFc5?:0
+S1
+R1
+R7
+8/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/top_module.sv
+F/home/ekon-ihc/Desktop/UNIV_BOLOGNA_TEST/hw_test/sim/hw/top_module.sv
+!i122 0
+L0 9 45
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R3

@@ -45,7 +45,7 @@ SIM_FILES = $(SIM_DIR)/hw
 
 
 .PHONY: all
-all: compile simulate
+all: clean compile simulate view_wave
 
 # Compile the design
 .PHONY: compile
@@ -70,6 +70,12 @@ simulate:
 	-do "log -r /*; run -all; quit" \
 	| tee $(LOG_FILES)/simulation.log
 	@echo "Simulation completed. Check simulation.log for details."
+
+
+.PHONY: view_wave
+view_wave:
+	@echo "Opening waveform viewer ..."
+	vsim -view $(LOG_FILES)/wave.wlf
 
 
 
