@@ -11,15 +11,15 @@ import fifo_package::*;
 #(
 
 )(
-    input  wire                  clk      ,
-    input  wire                  rst_n    ,
+    input  logic                  clk      ,
+    input  logic                  rst_n    ,
 
-    input  wire [DATA_WIDTH-1:0] data_i   ,
+    input  logic [DATA_WIDTH-1:0] data_i   ,
 
-    input  wire                  pop_valid_o_i  ,    // Valid signal from pop_valid_o of FIFO
-    output wire                  pop_grant_i_o  ,    // Grant signal to pop_grant_i of FIFO
-    output wire                  valid_o  ,
-    input  wire                  grant_i  
+    input  logic                  pop_valid_o_i  ,    // Valid signal from pop_valid_o of FIFO
+    output logic                  pop_grant_i_o  ,    // Grant signal to pop_grant_i of FIFO
+    output logic                  valid_o  ,
+    input  logic                  grant_i  
 );
 
 reg parity_bit;         // Register to hold the parity bit

@@ -11,22 +11,22 @@ import fifo_package::*;
 #(
 
 )(
-    input  wire clk,
-    input  wire rst_n,
+    input  logic clk,
+    input  logic rst_n,
 
-    input  wire [DATA_WIDTH-1:0] data_i   ,
-    input  wire                  valid_i  ,
-    output wire                  grant_o  ,
+    input  logic [DATA_WIDTH-1:0] data_i   ,
+    input  logic                  valid_i  ,
+    output logic                  grant_o  ,
 
-    input  wire                  grant_i  ,
-    output wire [DATA_WIDTH-1:0] data_o   ,
-    output wire                  valid_o  
+    input  logic                  grant_i  ,
+    output logic [DATA_WIDTH-1:0] data_o   ,
+    output logic                  valid_o  
 
 );
 
 // Internal connexions
-wire grant_connect;
-wire valid_connect;
+logic grant_connect;
+logic valid_connect;
 
 fifo fifo_inst (
     .clk            (clk            )  ,

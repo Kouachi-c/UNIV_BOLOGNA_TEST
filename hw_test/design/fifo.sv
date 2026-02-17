@@ -11,16 +11,16 @@ import fifo_package::*;
 #(
 
 )(
-    input  wire clk,
-    input  wire rst_n,
+    input  logic clk,
+    input  logic rst_n,
 
-    input  wire [DATA_WIDTH-1:0] push_data_i   ,
-    input  wire                  push_valid_i  ,
-    output wire                  push_grant_o  ,
+    input  logic [DATA_WIDTH-1:0] push_data_i   ,
+    input  logic                  push_valid_i  ,
+    output logic                  push_grant_o  ,
 
-    input  wire                  pop_grant_i   ,
-    output wire [DATA_WIDTH-1:0] pop_data_o    ,
-    output wire                  pop_valid_o   
+    input  logic                  pop_grant_i   ,
+    output logic [DATA_WIDTH-1:0] pop_data_o    ,
+    output logic                  pop_valid_o   
     
    
 );
