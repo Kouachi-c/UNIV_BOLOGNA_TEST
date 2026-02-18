@@ -4,9 +4,9 @@
 
 `include "params.sv"
 
-`timescale 1ns/1ps
+//`timescale 1ns/1ps
 
-module tb_top;
+module tb;
 import fifo_package::*;
 
     // -------------------------
@@ -40,7 +40,7 @@ import fifo_package::*;
     // -------------------------
     // Horloge : 100 MHz
     // -------------------------
-    initial clk = 0;
+    initial clk = 1;
     always #5 clk = ~clk;
 
     // -------------------------
@@ -60,48 +60,45 @@ import fifo_package::*;
         data_i  = 0;
         valid_i = 0;
         grant_i = 0;
+        #30;
 
-        // attendre la fin du reset
-        @(posedge rst_n);
-        @(posedge clk);
-
-        // Envoi d’une donnée
-        data_i  = 8'hA5;
+        // Test 1: Envoi d'une donnée valide avec grant
+        data_i  = 32'hA5A5A5A5; // Exemple de donnée
         valid_i = 1;
+        #10;
+        valid_i = 0; // Désactiver valid_i après l'envoi de la donnée
+        grant_i = 1; // Accorder la demande
+        #10;
 
-        // attendre que le DUT accepte
-        wait (grant_o == 1);
-        @(posedge clk);
-
-        valid_i = 0;
-
-        // Simuler que le récepteur est prêt
-        #20;
-        grant_i = 1;
-        @(posedge clk);
-        grant_i = 0;
-
-        // nouvelle donnée
-        #20;
-        data_i  = 8'h3C;
+        // Test 2: Envoi d'une donnée valide sans grant
+        data_i  = 32'h5A5A5A5A; // Exemple de donnée
         valid_i = 1;
+        #10;
+        valid_i = 0; // Désactiver valid_i après l'envoi de la donnée
+        grant_i = 0; // Ne pas accorder la demande
+        #10;
 
-        wait (grant_o == 1);
-        @(posedge clk);
+        // Test 3: Envoi d'une donnée invalide avec grant
+        data_i  = 32'hFFFFFFFF; // Exemple de donnée
         valid_i = 0;
+        #10;
+        grant_i = 1; // Accorder la demande
+        #10;
 
-        // fin simulation
-        #100;
+        // Test 4: Envoi d'une donnée invalide sans grant
+        data_i  = 32'h00000000; // Exemple de donnée
+        valid_i = 0;
+        #10;
+        grant_i = 0; // Ne pas accorder la demande
+        #10;
+
+        // Fin du test
+        #20;
         $finish;
+
+
     end
 
-    // -------------------------
-    // Monitor debug
-    // -------------------------
-    initial begin
-        $display("time | valid_i grant_o | valid_o grant_i | data_i data_o");
-        $monitor("%4t |    %0b       %0b   |    %0b       %0b   |  %h    %h",
-                 $time, valid_i, grant_o, valid_o, grant_i, data_i, data_o);
-    end
+
 
 endmodule

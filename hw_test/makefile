@@ -20,7 +20,7 @@ TB_DIR = $(CUR_DIR)/testbench
 SIM_DIR = $(CUR_DIR)/sim
 
 # TOP_MODULE
-TOP_MODULE = top_module
+TOP_MODULE = tb
 
 # Source files for simulation
 SRC_FILES = $(FILES_DIR)/top_module.sv \
@@ -75,7 +75,8 @@ simulate:
 .PHONY: view_wave
 view_wave:
 	@echo "Opening waveform viewer ..."
-	vsim -view $(LOG_FILES)/wave.wlf
+	vsim -view $(LOG_FILES)/wave.wlf \
+	-do $(SIM_DIR)/signals.do
 
 
 

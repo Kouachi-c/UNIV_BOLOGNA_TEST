@@ -45,6 +45,7 @@ reg push_grant_o_reg; // Register for push grant output
 reg pop_valid_o_reg;  // Register for pop valid output
 
 
+
 /////////////////////////////////////////////////
 //       CONTROL LOGIC                         //
 /////////////////////////////////////////////////
@@ -105,7 +106,7 @@ always_comb begin : FIFO_POP_LOGIC
         fifo_re = 1'b0; // Disable read on reset
     end else if (pop_grant_i && pop_valid_o_reg) begin
         fifo_re = 1'b1; // Enable read when granted and valid
-        read_ptr = read_ptr + 1; // pop_valid_o_reg Increment read pointer when granted and not empty
+        read_ptr = read_ptr + 1; // Increment read pointer when granted and not empty
     end else begin
         fifo_re = 1'b0; // Disable read otherwise
     end
